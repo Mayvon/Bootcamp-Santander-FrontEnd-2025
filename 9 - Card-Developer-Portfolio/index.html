@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Perfil DIO — Mayvon Alves</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bg"></div>
+
+  <main class="card" id="app">
+    <header class="header">
+      <img class="avatar" id="avatar" src="https://hermes.dio.me/users/student/3e925a59-2dbe-4cd5-8c78-57d14951a765.jpg" onerror="this.src='assets/mayvon-fallback.jpg'" alt="Foto de Mayvon Alves">
+      <div class="headline">
+        <h1>Perfil DIO</h1><p class="name" id="diousername"></p>
+        <ul class="meta">
+          <li>👤 UX/UI Designer</li>
+          <li>📍 Recife - PE</li>
+          <li>✉️ mayvom@gmail.com</li>
+        </ul>
+        <ul class="meta dio" id="stats">
+          <li>Carregando dados do perfil…</li>
+        </ul>
+      </div>
+      <div class="dots" aria-hidden="true"><span></span><span></span><span></span></div>
+    </header>
+
+    <section class="accordion">
+      <details open>
+        <summary><h2>Skills</h2></summary>
+        <div class="pane two-col">
+          <div>
+            <h3>Habilidades pessoais</h3>
+            <ul class="tags">
+              <li>Empatia</li><li>Liderança</li><li>Trabalho em Equipe</li>
+              <li>Flexibilidade</li><li>Organização</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Principais habilidades</h3>
+            <ul class="tags" id="top-skills">
+              <li>Carregando…</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary><h2>Conquistas recentes na DIO</h2></summary>
+        <div class="pane">
+          <ul class="bullets" id="achievements">
+            <li>Carregando conquistas…</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary><h2>Últimas Certificações</h2></summary>
+        <div class="pane">
+          <div class="certs" id="certs">
+            <div class="hint">Buscando as 2 mais recentes…</div>
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <footer class="footer">
+      <!-- Logo DIO no canto inferior direito -->
+      <a href="https://www.dio.me" class="dio-logo" aria-label="DIO"><svg xmlns="http://www.w3.org/2000/svg" width="98" height="40" fill="none" viewBox="0 0 98 40"><path fill="#fff" d="M97.058 32.674a6.446 6.446 0 01-3.963 5.96 6.428 6.428 0 01-7.016-1.389 6.443 6.443 0 014.545-10.999c1.704 0 3.338.678 4.544 1.883a6.446 6.446 0 011.89 4.545zM77.737 35.135a16.805 16.805 0 004.415-21.243 16.778 16.778 0 00-8.662-7.637 16.757 16.757 0 00-11.54-.227 16.776 16.776 0 00-8.954 7.292 16.805 16.805 0 003.58 21.4 16.762 16.762 0 0021.16.415zM33.963 20.765V0A12.847 12.847 0 0023 6.138 16.751 16.751 0 003.948 11.66a16.796 16.796 0 00-.458 19.85 16.77 16.77 0 008.342 6.278 16.752 16.752 0 0018.921-5.959 16.797 16.797 0 003.25-9.927c0-.384-.02-.762-.04-1.138zM42.208 12.934a6.387 6.387 0 00-4.517 1.873 6.4 6.4 0 00-1.871 4.522v19.364c3.41 0 6.68-1.356 9.091-3.77a12.878 12.878 0 003.766-9.101v-6.405a6.487 6.487 0 00-1.894-4.582 6.473 6.473 0 00-4.575-1.901z"></path><path fill="#fff" d="M48.687 6.44a6.445 6.445 0 01-3.971 5.95 6.427 6.427 0 01-7.012-1.396A6.443 6.443 0 0142.254 0c1.706 0 3.342.68 4.548 1.887a6.447 6.447 0 011.885 4.553z"></path></svg></a>
+    </footer>
+  </main>
+<!-- inline script injected -->
+<script id="app-script">
+// Busca dinâmica do perfil público da DIO a cada carregamento.
+// Estratégia: tentar múltiplos endpoints do r.jina.ai para evitar CORS
+// e depois extrair tanto do DOM quanto de possíveis scripts JSON embutidos.
+
+const PROFILE = "https://www.dio.me/users/mayvom";
+const CANDIDATES = [
+  "http://localhost:8787/proxy?u=" + encodeURIComponent("https://www.dio.me/users/mayvom"),
+  "https://r.jina.ai/http://www.dio.me/users/mayvom",
+  "https://r.jina.ai/http://dio.me/users/mayvom"
+];
+
+async function fetchProfile(){
+  let lastErr;
+  for(const url of CANDIDATES){
+    try{
+      const res = await fetch(url, { cache: "no-store" });
+      if(res.ok){
+        const html = await res.text();
+        const parser = new DOMParser();
+        return parser.parseFromString(html, "text/html");
+      }else{
+        lastErr = new Error("HTTP " + res.status + " em " + url);
+      }
+    }catch(e){
+      lastErr = e;
+    }
+  }
+  throw lastErr || new Error("Não foi possível baixar o HTML do perfil.");
+}
+
+function readAllJsonFromScripts(doc){
+  const blocks = [];
+  doc.querySelectorAll("script").forEach(sc => {
+    const txt = sc.textContent?.trim();
+    if(!txt) return;
+    // Tenta JSON puro
+    try{
+      blocks.push(JSON.parse(txt));
+      return;
+    }catch{}
+    // Tenta JSON envovido em window.__... = {...}
+    const m = txt.match(/\{[\s\S]*\}/);
+    if(m){
+      try{ blocks.push(JSON.parse(m[0])); }catch{}
+    }
+  });
+  return blocks;
+}
+
+function scan(obj, pred, path = []){
+  const out = [];
+  if (pred(obj, path)) out.push(obj);
+  if (obj && typeof obj === "object"){
+    for (const [k, v] of Object.entries(obj)){
+      out.push(...scan(v, pred, path.concat(k)));
+    }
+  }
+  return out;
+}
+
+function getFirstTextCandidate(list){
+  for(const v of list){
+    if(typeof v === "string" && v.trim()) return v.trim();
+    if(typeof v === "number") return String(v);
+  }
+  return null;
+}
+
+function extractStats(doc){
+  const stats = {};
+  // 1) Tenta ler do texto
+  const txt = doc.body?.textContent || "";
+  const mLevel = txt.match(/Level\s*([0-9]+)/i);
+  const mRep   = txt.match(/Reputa[cç][aã]o[:\s]*([\d.]+)/i);
+  const mSince = txt.match(/Usu[aá]rio DIO desde\s*([^\n]+)/i);
+  const mLast  = txt.match(/Atividade mais recente\s*([^\n]+)/i);
+  if(mLevel) stats.level = mLevel[1];
+  if(mRep) stats.reputation = mRep[1];
+  if(mSince) stats.memberSince = mSince[1];
+  if(mLast) stats.lastActivity = mLast[1];
+
+  // 2) Se faltou algo, tenta vasculhar scripts JSON embutidos
+  if(!stats.level || !stats.reputation || !stats.memberSince || !stats.lastActivity){
+    const blocks = readAllJsonFromScripts(doc);
+    const nodesLevel = scan(blocks, (n,p)=> typeof n==='number' && /level/i.test(p.join(".")));
+    const nodesRep   = scan(blocks, (n,p)=> (typeof n==='number'||typeof n==='string') && /reput/i.test(p.join(".")));
+    const nodesSince = scan(blocks, (n,p)=> typeof n==='string' && /(member|since|criado|created|joined)/i.test(p.join(".")));
+    const nodesLast  = scan(blocks, (n,p)=> typeof n==='string' && /(last.*activity|lastActive|updatedAt)/i.test(p.join(".")));
+
+    stats.level = stats.level || getFirstTextCandidate(nodesLevel);
+    stats.reputation = stats.reputation || getFirstTextCandidate(nodesRep);
+    stats.memberSince = stats.memberSince || getFirstTextCandidate(nodesSince);
+    stats.lastActivity = stats.lastActivity || getFirstTextCandidate(nodesLast);
+  }
+  return stats;
+}
+
+function extractDisplayName(doc){
+  // tenta a tag <title> "Nome — DIO Community Profile"
+  const t = doc.querySelector("title")?.textContent || "";
+  const m = t.split("—")[0].trim();
+  if(m) return m;
+  // fallback: maior heading no body
+  const h = doc.querySelector("h1,h2,h3");
+  if(h) return h.textContent.trim();
+  return "Usuário DIO";
+}
+
+function extractTopSkills(doc){
+  const txt = doc.body?.textContent || "";
+  const guesses = [];
+  ["JavaScript","TypeScript","React","HTML","CSS","UX","UI","Figma","Azure","Node","Python","IA","AI","Git","GitHub"]
+    .forEach(skill => { if(new RegExp("\\b"+skill+"\\b","i").test(txt)) guesses.push(skill); });
+  return [...new Set(guesses)].slice(0,8);
+}
+
+function extractAchievements(doc){
+  // Procura seção "Últimas Conquistas" com ÍCONES (png/webp).
+  const imgs = [...doc.querySelectorAll("img")];
+  const picks = [];
+  const isIcon = (src, alt) => {
+    if(!src) return false;
+    const s = src.toLowerCase();
+    const a = (alt||"").toLowerCase();
+    // Heurística: ícones de conquistas no perfil aparecem como png/webp e contêm
+    // termos como product, stripe, badge, achievement ou bootcamp.
+    return (s.endsWith(".png") || s.endsWith(".webp")) &&
+           ( /product|stripe|badge|achiev|bootcamp|conquista/.test(s) ||
+             /badge|conquista|achievement/.test(a) );
+  };
+  for(const im of imgs){
+    const src = im.getAttribute("src") || im.getAttribute("data-src");
+    const alt = im.getAttribute("alt") || "";
+    if(isIcon(src, alt)){
+      try{
+        const url = new URL(src, "https://www.dio.me/").href;
+        if(!picks.includes(url)) picks.push(url);
+      }catch{}
+    }
+    if(picks.length >= 6) break;
+  }
+  return picks.slice(0,6);
+}
+    if (picks.length >= 6) break;
+  }
+  return picks;
+}
+
+function extractCertificates(doc){
+  const imgs = [...doc.querySelectorAll("img, source")];
+  const links = [...doc.querySelectorAll("a")];
+  const urls = [];
+  function add(u){
+    if(!u) return;
+    try{
+      const href = new URL(u, "https://www.dio.me/").href;
+      // manter somente certificados (evita badges)
+      if(/certificado|certificate|\/certificates\//i.test(href) && !urls.includes(href)) urls.push(href);
+    }catch{}
+  }
+  imgs.forEach(n => add(n.getAttribute("src") || n.getAttribute("data-src")));
+  links.forEach(a => add(a.getAttribute("href")));
+  // últimas duas (ordem do site normalmente é cronológica – pegue do fim)
+  return urls.slice(-2);
+}
+  }
+  imgs.forEach(img => add(img.getAttribute("src") || img.getAttribute("data-src")));
+  links.forEach(a  => add(a.getAttribute("href")));
+  return Array.from(urls).slice(0,2);
+}
+
+function renderStats(stats){
+  // name
+  const name = extractDisplayName(window.__DIO_DOC__);
+  const nameEl = document.getElementById("diousername");
+  if(nameEl) nameEl.textContent = name;
+  // stats
+  const ul = document.querySelector("#stats");
+  ul.innerHTML = "";
+  const items = [
+    stats.level ? `🏆 Level ${stats.level}` : null,
+    stats.memberSince ? `🗓️ Usuário DIO desde ${stats.memberSince}` : null,
+    stats.lastActivity ? `⏱️ Atividade mais recente: ${stats.lastActivity}` : null,
+    stats.reputation ? `⭐ Reputação: ${stats.reputation}` : null,
+  ].filter(Boolean);
+  if(!items.length){ ul.innerHTML = "<li>Falha ao carregar o perfil público.</li>"; return; }
+  items.forEach(t => { const li=document.createElement("li"); li.textContent=t; ul.appendChild(li); });
+}\n
+  const ul = document.querySelector("#stats");
+  ul.innerHTML = "";
+  const items = [
+    stats.level ? `🏆 Level ${stats.level}` : null,
+    stats.memberSince ? `🗓️ Usuário DIO desde ${stats.memberSince}` : null,
+    stats.lastActivity ? `⏱️ Atividade mais recente: ${stats.lastActivity}` : null,
+    stats.reputation ? `⭐ Reputação: ${stats.reputation}` : null,
+  ].filter(Boolean);
+  if(!items.length){ ul.innerHTML = "<li>Falha ao carregar o perfil público.</li>"; return; }
+  items.forEach(t => { const li=document.createElement("li"); li.textContent=t; ul.appendChild(li); });
+}
+
+function renderTopSkills(skills){
+  const ul = document.querySelector("#top-skills");
+  ul.innerHTML = "";
+  if(!skills.length){ ul.innerHTML = "<li>Sem dados públicos — edite suas habilidades no perfil.</li>"; return; }
+  skills.forEach(s => { const li=document.createElement("li"); li.textContent=s; ul.appendChild(li); });
+}
+
+function renderAchievements(items){
+  const ul = document.querySelector("#achievements");
+  ul.innerHTML = "";
+  if(!items.length){ ul.innerHTML = "<li>Não encontrei conquistas recentes públicas.</li>"; return; }
+  items.forEach(t => { const li=document.createElement("li"); li.textContent=t; ul.appendChild(li); });
+}
+
+function renderCertificates(urls){
+  const box = document.querySelector("#certs");
+  box.innerHTML = "";
+  if(!urls.length){ box.innerHTML = '<div class="hint">Nenhuma imagem de certificado pública encontrada.</div>'; return; }
+  urls.forEach(u => {
+    const a = document.createElement("a");
+    a.href = u; a.target = "_blank"; a.rel = "noopener";
+    const img = document.createElement("img");
+    img.loading = "lazy"; img.alt = "Certificado";
+    img.src = u;
+    a.appendChild(img);
+    box.appendChild(a);
+  });
+}
+
+async function fetchFallbackCache(){
+  try{
+    const res = await fetch("assets/profile-cache.json", { cache: "no-store" });
+    if(!res.ok) throw new Error("cache http "+res.status);
+    return await res.json();
+  }catch{ return null; }
+}
+
+(async function start(){
+  try{
+    const doc = await fetchProfile(); window.__DIO_DOC__ = doc;
+    console.log("[DIO Parser] HTML obtido com sucesso");
+    const stats = extractStats(doc);
+    renderStats(stats);
+    renderTopSkills(extractTopSkills(doc));
+    renderAchievementIcons(extractAchievements(doc));
+    renderCertificates(extractCertificates(doc));
+  }catch(err){
+    console.error("[DIO Parser] Erro remoto:", err);
+    const cache = await fetchFallbackCache();
+    if(cache){
+      // Render from cache
+      const nameEl = document.getElementById("diousername");
+      if(nameEl) nameEl.textContent = cache.displayName || "Usuário DIO";
+      renderStats({ level: cache.level, reputation: cache.reputation, memberSince: cache.memberSince, lastActivity: cache.lastActivity });
+      renderTopSkills(cache.topSkills || []);
+      renderAchievementIcons(cache.achievements || []);
+      renderCertificates(cache.certs || []);
+    }else{
+      document.querySelector("#stats").innerHTML = "<li>Falha ao carregar o perfil público.</li>";
+    }
+  }\n})();
+function renderAchievementIcons(urls){
+  const ul = document.querySelector("#achievements");
+  ul.innerHTML = "";
+  if(!urls.length){
+    ul.innerHTML = "<li>Não encontrei ícones públicos de conquistas.</li>";
+    return;
+  }
+  // Troca a UL por um grid de ícones
+  const grid = document.createElement("div");
+  grid.className = "ach-icons";
+  urls.forEach(u => {
+    const img = document.createElement("img");
+    img.src = u; img.loading = "lazy"; img.alt = "Conquista";
+    grid.appendChild(img);
+  });
+  ul.parentElement.replaceChild(grid, ul);
+}
+
+</script>
+</body>
+</html>

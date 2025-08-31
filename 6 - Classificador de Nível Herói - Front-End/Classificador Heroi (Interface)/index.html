@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Classificador de Nível do Herói</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>🏆 Classificador de Nível do Herói</h1>
+    <p class="subtitle">Preencha o nome e a XP para descobrir o nível do herói.</p>
+
+    <form id="form-classifier" class="card">
+      <div class="field">
+        <label for="nome">Nome do herói</label>
+        <input id="nome" name="nome" type="text" placeholder="Ex.: Diana" required>
+      </div>
+      <div class="field">
+        <label for="xp">Experiência (XP)</label>
+        <input id="xp" name="xp" type="number" min="0" step="1" placeholder="Ex.: 2750" required>
+      </div>
+      <button type="submit" class="btn">Classificar</button>
+    </form>
+
+    <section class="card output">
+      <h2>Resultado</h2>
+      <p id="result">—</p>
+    </section>
+
+    <section class="card">
+      <h2>Exemplos gerados via laço de repetição</h2>
+      <p class="hint">Estes exemplos são renderizados no carregamento da página usando <code>for</code> e <code>for...of</code>.</p>
+      <table class="table" id="samples-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Herói</th>
+            <th>XP</th>
+            <th>Nível</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Feito com 💛 em JavaScript — Variáveis, Operadores, Laços e Decisões</small>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
