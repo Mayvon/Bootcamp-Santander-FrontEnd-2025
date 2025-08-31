@@ -1,4 +1,4 @@
-# Guia Rápido de HTML – README
+# Conceitos de HTML –
 
 Este README resume o conteúdo do arquivo **Guia Rápido de HTML** (somente HTML) que apresenta, de forma didática, os fundamentos para criar páginas web. O arquivo está organizado com **sidebar** (conteúdos), **conteúdo principal** (explicações e exemplos) e **âncoras** (navegação).
 
