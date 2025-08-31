@@ -4,6 +4,9 @@
 Este repositório contém todos os projetos e atividades que desenvolvi durante o Bootcamp Santander Frontend 2025, uma iniciativa da Digital Innovation One (DIO) em parceria com o Santander. Cada pasta representa um projeto específico, contendo seus próprios arquivos e um .md com detalhes sobre os desafios e tecnologias utilizadas. Ao todo todo o bootcamp correspondeu 102h com foco em **layout responsivo**, **componentização**, **lógica de programação** aplicada e **integração dinâmica** de conteúdo.
 
 ---
+## #Certificado
+
+---
 
 ## Índice (links internos)
 1. [Conceitos do HTML](#1-página-de-conceitos-html) — [`./conceitos-do-html/`](./1%20-%20HTML/index-html.md/)
