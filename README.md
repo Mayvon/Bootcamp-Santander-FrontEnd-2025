@@ -7,45 +7,28 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 ---
 
 ## Índice (links internos)
-
-1. [Perfil DIO (dinâmico)](#1-perfil-dio-dinâmico) — [`./perfil-dio/`](./perfil-dio/)
-2. [Jogo Yu-Gi-Oh! Jokenpo](#2-jogo-yu-gi-oh-jokenpo) — [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
-3. [Trilha de CSS — Landing](#3-trilha-de-css--landing) — [`./trilha-css-site/`](./trilha-css-site/)
-4. [YouTube Clone — Layout](#4-youtube-clone--layout) — [`./youtube-clone/`](./youtube-clone/)
+1. [Página de Conceitos (HTML)](#1-página-de-conceitos-htmlcss) — [`./conceitos-dev-web/`](./conceitos-dev-web/)
+2. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
+3. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
+4. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
 5. [Discord Landing (Responsivo)](#5-discord-landing-responsivo) — [`./discord-landing/`](./discord-landing/)
-6. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
-7. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
-8. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
-9. [Página de Conceitos (HTML+CSS)](#9-página-de-conceitos-htmlcss) — [`./conceitos-dev-web/`](./conceitos-dev-web/)
+6. [YouTube Clone — Layout](#4-youtube-clone--layout) — [`./youtube-clone/`](./youtube-clone/)
+7. [Trilha de CSS — Landing](#3-trilha-de-css--landing) — [`./trilha-css-site/`](./trilha-css-site/)
+8. [Jogo Yu-Gi-Oh! Jokenpo](#2-jogo-yu-gi-oh-jokenpo) — [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
+9. [Perfil DIO (dinâmico)](#1-perfil-dio-dinâmico) — [`./perfil-dio/`](./perfil-dio/)
 
-> Se os nomes de pastas do seu repositório forem diferentes, ajuste os links acima para refletir a sua estrutura.
+---
+## 1) Página de Conceitos (HTML)
+
+**Pasta:** [`./conceitos-dev-web/`](./conceitos-dev-web/)
+**Stack:** HTML, CSS (documentação/estilo leve).
+**Resumo:** Página de estudo que resume conceitos listados (títulos do design fornecido), com navegação por âncoras e estrutura semântica.
+**Como rodar:** abrir `index.html`.
+**Leituras:** [`./conceitos-dev-web/README.md`](./conceitos-dev-web/README.md)
 
 ---
 
-## 1) Perfil DIO (dinâmico)
-
-**Pasta:** [`./perfil-dio/`](./perfil-dio/)
-**Stack:** HTML, CSS (glassmorphism, grid responsivo), JavaScript (fetch + DOMParser).
-**Resumo:** Landing que carrega, a cada visita, dados do perfil público DIO e exibe **skills**, **conquistas** (6 ícones) e **2 últimas certificações** (imagens).
-**Como rodar:**
-
-* Estático (rápido): Live Server.
-* Com proxy local (opcional): `npm start` dentro da pasta para liberar CORS via `server.js`.
-  **Leituras:** [`./perfil-dio/README.md`](./perfil-dio/README.md)
-
----
-
-## 2) Jogo Yu-Gi-Oh! Jokenpo
-
-**Pasta:** [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
-**Stack:** HTML, CSS (animações/overlays, assets de *RPG* e *cursor*), JavaScript modular (ES Modules).
-**Resumo:** Jogo “pedra-papel-tesoura” tematizado com cartas (**dragon/magician/exodia**). Possui **placar**, **log de partidas**, **pré-visualização** de cartas, **efeitos sonoros** e **vídeo de fundo**. Estado global controlado, **funções puras** para regras e UI desacoplada.
-**Como rodar:** servir por HTTP (Live Server ou `python -m http.server`).
-**Leituras:** [`./yugioh-jokenpo/README.md`](./yugioh-jokenpo/README.md)
-
----
-
-## 3) Trilha de CSS — Landing
+## 2) Trilha de CSS — Landing
 
 **Pasta:** [`./trilha-css-site/`](./trilha-css-site/)
 **Stack:** HTML, CSS (tipografia, grids, responsividade).
@@ -55,7 +38,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 4) YouTube Clone — Layout
+## 3) YouTube Clone — Layout
 
 **Pasta:** [`./youtube-clone/`](./youtube-clone/)
 **Stack:** HTML, CSS (flex/grid, responsividade).
@@ -65,7 +48,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 5) Discord Landing (Responsivo)
+## 4) Discord Landingpage Clone (Responsivo)
 
 **Pasta:** [`./discord-landing/`](./discord-landing/)
 **Stack:** HTML, CSS; fontes **Luckiest Guy** (título) e **Open Sans** (texto) via Google Fonts.
@@ -75,7 +58,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 6) Classificador de Nível de Herói — CLI
+## 5) Classificador de Nível de Herói — CLI
 
 **Pasta:** [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
 **Stack:** JavaScript (node/terminal).
@@ -85,7 +68,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 7) Classificador de Nível de Herói — UI
+## 6) Classificador de Nível de Herói — UI
 
 **Pasta:** [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
 **Stack:** HTML, CSS, JavaScript (DOM).
@@ -95,7 +78,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 8) Developer Pokédex — Guia Git
+## 7) Developer Pokédex — Guia Git
 
 **Pasta:** [`./developer-pokedex-git/`](./developer-pokedex-git/)
 **Stack:** Markdown (guia).
@@ -104,14 +87,26 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 9) Página de Conceitos (HTML+CSS)
+## 8) Jogo Yu-Gi-Oh! Jokenpo
 
-**Pasta:** [`./conceitos-dev-web/`](./conceitos-dev-web/)
-**Stack:** HTML, CSS (documentação/estilo leve).
-**Resumo:** Página de estudo que resume conceitos listados (títulos do design fornecido), com navegação por âncoras e estrutura semântica.
-**Como rodar:** abrir `index.html`.
-**Leituras:** [`./conceitos-dev-web/README.md`](./conceitos-dev-web/README.md)
+**Pasta:** [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
+**Stack:** HTML, CSS (animações/overlays, assets de *RPG* e *cursor*), JavaScript modular (ES Modules).
+**Resumo:** Jogo “pedra-papel-tesoura” tematizado com cartas (**dragon/magician/exodia**). Possui **placar**, **log de partidas**, **pré-visualização** de cartas, **efeitos sonoros** e **vídeo de fundo**. Estado global controlado, **funções puras** para regras e UI desacoplada.
+**Como rodar:** servir por HTTP (Live Server ou `python -m http.server`).
+**Leituras:** [`./yugioh-jokenpo/README.md`](./yugioh-jokenpo/README.md)
 
+---
+
+## 9) Card Developer (dinâmico)
+
+**Pasta:** [`./perfil-dio/`](./perfil-dio/)
+**Stack:** HTML, CSS (glassmorphism, grid responsivo), JavaScript (fetch + DOMParser).
+**Resumo:** Landing que carrega, a cada visita, dados do perfil público DIO e exibe **skills**, **conquistas** (6 ícones) e **2 últimas certificações** (imagens).
+**Como rodar:**
+
+* Estático (rápido): Live Server.
+* Com proxy local (opcional): `npm start` dentro da pasta para liberar CORS via `server.js`.
+  **Leituras:** [`./perfil-dio/README.md`](./perfil-dio/README.md)
 ---
 
 ## Apanhado geral (o que foi trabalhado)
@@ -140,10 +135,8 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## Contribuição / organização do repo
+## Organização do repositório
 
-* Cada pasta contém seu **`README.md`** com instruções específicas.
-* Siga o padrão: `feature/nome-projeto`, PR com descrição, e commits concisos.
-* Issues podem ser abertas para melhorias de acessibilidade, performance e testes.
+* Cada projeto contém seu **`README.md`** com detalhes específicos sobre as atividades.
 
 ---
