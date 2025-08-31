@@ -1,6 +1,6 @@
-# README — Repositório Principal de Projetos
+# README — Bootcamp Santander Front-End 2025 — Portfólio de Projetos
 
-Este repositório reúne os projetos front-end desenvolvidos ao longo do percurso (HTML, CSS e JavaScript), com foco em **layout responsivo**, **componentização**, **lógica de programação** aplicada a jogos e **integração dinâmica** de conteúdo.
+Este repositório contém todos os projetos e atividades que desenvolvi durante o Bootcamp Santander Frontend 2025, uma iniciativa da Digital Innovation One (DIO) em parceria com o Santander. Cada pasta representa um projeto específico, contendo seus próprios arquivos e um .md com detalhes sobre os desafios e tecnologias utilizada, com foco em **layout responsivo**, **componentização**, **lógica de programação** aplicada a jogos e **integração dinâmica** de conteúdo.
 
 > Dica: se você clonar este repo, rode os projetos estáticos com o **Live Server** do VS Code ou um HTTP server simples (`python -m http.server`). Quando houver **ES Modules** (import/export de JS), é **obrigatório** servir por HTTP.
 
