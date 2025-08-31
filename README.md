@@ -1,5 +1,5 @@
-# Bootcamp Santander Front-End 2025 — ![Santander](https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg)
-
+# Bootcamp Santander Front-End 2025 — ![Santander](https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg) ![DIO]([https://upload.wikimedia.org/wikipedia/commons/b/b8/Banco_Santander_Logotipo.svg](https://github.com/Mayvon/Bootcamp-Santander-FrontEnd-2025/edit/main/9%20-%20Card-Developer-Portfolio/assets/Dio.svg))
+ 
 Este repositório contém todos os projetos e atividades que desenvolvi durante o Bootcamp Santander Frontend 2025, uma iniciativa da Digital Innovation One (DIO) em parceria com o Santander. Cada pasta representa um projeto específico, contendo seus próprios arquivos e um .md com detalhes sobre os desafios e tecnologias utilizadas. Ao todo todo o bootcamp correspondeu 102h com foco em **layout responsivo**, **componentização**, **lógica de programação** aplicada e **integração dinâmica** de conteúdo.
 
 ## Certificado
