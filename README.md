@@ -1,16 +1,14 @@
-# Bootcamp Santander Front-End 2025 — Portfólio de Projetos
+# README — Repositório Principal de Projetos
 
-Repositório: **[Mayvon/Bootcamp-Santander-FrontEnd-2025](https://github.com/Mayvon/Bootcamp-Santander-FrontEnd-2025)**
+Este repositório reúne os projetos front-end desenvolvidos ao longo do percurso (HTML, CSS e JavaScript), com foco em **layout responsivo**, **componentização**, **lógica de programação** aplicada a jogos e **integração dinâmica** de conteúdo.
 
-Monorepo com projetos de **HTML, CSS e JavaScript** desenvolvidos ao longo do bootcamp — foco em **responsividade**, **lógica aplicada**, **organização de código**, **acessibilidade** e **integração dinâmica**.
-
-> Para executar localmente, use o **Live Server** do VS Code ou um servidor HTTP simples: `python -m http.server`.
+> Dica: se você clonar este repo, rode os projetos estáticos com o **Live Server** do VS Code ou um HTTP server simples (`python -m http.server`). Quando houver **ES Modules** (import/export de JS), é **obrigatório** servir por HTTP.
 
 ---
 
 ## Índice (links internos)
 
-1. [Página de Conceitos (HTML + CSS)](#1-página-de-conceitos-html--css) — [`./conceitos-dev-web/`](./conceitos-dev-web/)
+1. [Perfil DIO (dinâmico)](#1-perfil-dio-dinâmico) — [`./perfil-dio/`](./perfil-dio/)
 2. [Jogo Yu-Gi-Oh! Jokenpo](#2-jogo-yu-gi-oh-jokenpo) — [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
 3. [Trilha de CSS — Landing](#3-trilha-de-css--landing) — [`./trilha-css-site/`](./trilha-css-site/)
 4. [YouTube Clone — Layout](#4-youtube-clone--layout) — [`./youtube-clone/`](./youtube-clone/)
@@ -18,186 +16,136 @@ Monorepo com projetos de **HTML, CSS e JavaScript** desenvolvidos ao longo do bo
 6. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
 7. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
 8. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
-9. [Perfil DIO (dinâmico)](#9-perfil-dio-dinâmico) — [`./perfil-dio/`](./perfil-dio/)
+9. [Página de Conceitos (HTML+CSS)](#9-página-de-conceitos-htmlcss) — [`./conceitos-dev-web/`](./conceitos-dev-web/)
+
+> Se os nomes de pastas do seu repositório forem diferentes, ajuste os links acima para refletir a sua estrutura.
 
 ---
 
-## 1) Página de Conceitos (HTML + CSS)
+## 1) Perfil DIO (dinâmico)
 
-**Pasta:** [`./conceitos-dev-web/`](./conceitos-dev-web/)
-**Stack:** HTML semântico, CSS (tipografia, hierarquia visual, âncoras).
+**Pasta:** [`./perfil-dio/`](./perfil-dio/)
+**Stack:** HTML, CSS (glassmorphism, grid responsivo), JavaScript (fetch + DOMParser).
+**Resumo:** Landing que carrega, a cada visita, dados do perfil público DIO e exibe **skills**, **conquistas** (6 ícones) e **2 últimas certificações** (imagens).
+**Como rodar:**
 
-**O que há no projeto**
-
-* Estrutura de artigo com **barra lateral (anchors)** para navegação por seções.
-* Títulos/subtítulos organizando conceitos do layout de referência.
-* Estilos focados em legibilidade (line-height, contraste, espaçamentos).
-
-**Como rodar**
-
-* Abra `index.html` (Live Server recomendado).
+* Estático (rápido): Live Server.
+* Com proxy local (opcional): `npm start` dentro da pasta para liberar CORS via `server.js`.
+  **Leituras:** [`./perfil-dio/README.md`](./perfil-dio/README.md)
 
 ---
 
 ## 2) Jogo Yu-Gi-Oh! Jokenpo
 
 **Pasta:** [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
-**Stack:** HTML, CSS (assets de RPG, cursores custom), **JavaScript modular (ES Modules)**.
-
-**O que há no projeto**
-
-* Jokenpo temático com **três cartas jogáveis**.
-* **Placar** (vitórias/empates/derrotas) e **log de partidas** legível.
-* **Pré-visualização** de cartas, **overlay VS**, **BGM/SFX** e vídeo de fundo.
-* Estado global controlado, regras em **funções puras** e UI desacoplada.
-
-**Como rodar**
-
-* Servir por HTTP (Live Server ou `python -m http.server`).
+**Stack:** HTML, CSS (animações/overlays, assets de *RPG* e *cursor*), JavaScript modular (ES Modules).
+**Resumo:** Jogo “pedra-papel-tesoura” tematizado com cartas (**dragon/magician/exodia**). Possui **placar**, **log de partidas**, **pré-visualização** de cartas, **efeitos sonoros** e **vídeo de fundo**. Estado global controlado, **funções puras** para regras e UI desacoplada.
+**Como rodar:** servir por HTTP (Live Server ou `python -m http.server`).
+**Leituras:** [`./yugioh-jokenpo/README.md`](./yugioh-jokenpo/README.md)
 
 ---
 
 ## 3) Trilha de CSS — Landing
 
 **Pasta:** [`./trilha-css-site/`](./trilha-css-site/)
-**Stack:** HTML, **CSS responsivo** (hero, CTA, módulos).
-
-**O que há no projeto**
-
-* Seção hero com logo, título, descrição e **call to action**.
-* Seção **“O que vou aprender?”** com três módulos.
-* Blocos promocionais com copy e imagem.
-
-**Como rodar**
-
-* Abra `index.html`.
+**Stack:** HTML, CSS (tipografia, grids, responsividade).
+**Resumo:** Página promocional da trilha de CSS com **hero**, **módulos** e **call-to-action**, trabalhando cores, espaçamentos e contraste.
+**Como rodar:** abrir `index.html` (Live Server recomendado).
+**Leituras:** [`./trilha-css-site/README.md`](./trilha-css-site/README.md)
 
 ---
 
 ## 4) YouTube Clone — Layout
 
 **Pasta:** [`./youtube-clone/`](./youtube-clone/)
-**Stack:** HTML, **CSS (Flexbox/Grid, responsividade)**.
-
-**O que há no projeto**
-
-* **Navbar**, **sidebar** e **grade de vídeos** com miniaturas, título e metadados.
-* Estados de hover/foco e tokens de cor coerentes.
-
-**Como rodar**
-
-* Abra `index.html`.
+**Stack:** HTML, CSS (flex/grid, responsividade).
+**Resumo:** Reprodução de layout com **navbar**, **sidebar**, **grade de vídeos** e estados de hover/foco, seguindo o print do Figma.
+**Como rodar:** abrir `index.html`.
+**Leituras:** [`./youtube-clone/README.md`](./youtube-clone/README.md)
 
 ---
 
 ## 5) Discord Landing (Responsivo)
 
 **Pasta:** [`./discord-landing/`](./discord-landing/)
-**Stack:** HTML, **CSS responsivo**; Google Fonts **Luckiest Guy** (título) e **Open Sans** (texto).
-
-**O que há no projeto**
-
-* Landing baseada no Figma em **1280px (desktop)** e **428px (mobile)**.
-* Seções ilustradas e **rodapé em SVG**.
-
-**Como rodar**
-
-* Abra `index.html`.
+**Stack:** HTML, CSS; fontes **Luckiest Guy** (título) e **Open Sans** (texto) via Google Fonts.
+**Resumo:** Landing **1280px** / **428px** (mobile) baseada no Figma, com seções, ilustrações e **rodapé em SVG**.
+**Como rodar:** abrir `index.html`.
+**Leituras:** [`./discord-landing/README.md`](./discord-landing/README.md)
 
 ---
 
 ## 6) Classificador de Nível de Herói — CLI
 
 **Pasta:** [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
-**Stack:** **JavaScript (Node/terminal)**.
-
-**O que há no projeto**
-
-* Script que lê **nome** e **XP** e retorna o **nível** (Ferro → Radiante) segundo as faixas definidas.
-* Mensagem final: `O Herói de nome {nome} está no nível de {nivel}`.
-
-**Como rodar**
-
-```bash
-node index.js
-```
+**Stack:** JavaScript (node/terminal).
+**Resumo:** Script que lê nome e XP e classifica o nível (Ferro → Radiante) usando **variáveis**, **operadores**, **laços** e **decisões**.
+**Como rodar:** `node index.js` (ou `node hero.js`, conforme o nome do arquivo).
+**Leituras:** [`./classificador-heroi-cli/README.md`](./classificador-heroi-cli/README.md)
 
 ---
 
 ## 7) Classificador de Nível de Herói — UI
 
 **Pasta:** [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
-**Stack:** HTML, CSS, **JavaScript (DOM)**.
-
-**O que há no projeto**
-
-* Interface web para inserir nome/XP e exibir o nível.
-* Validações simples e feedback visual.
-
-**Como rodar**
-
-* Abra `index.html`.
+**Stack:** HTML, CSS, JavaScript (DOM).
+**Resumo:** Interface web para o classificador com foco em **design front-end** e **UX** (inputs, feedback visual, acessibilidade).
+**Como rodar:** abrir `index.html`.
+**Leituras:** [`./classificador-heroi-interface/README.md`](./classificador-heroi-interface/README.md)
 
 ---
 
 ## 8) Developer Pokédex — Guia Git
 
 **Pasta:** [`./developer-pokedex-git/`](./developer-pokedex-git/)
-**Stack:** **Markdown** (documentação).
-
-**O que há no projeto**
-
-* Guia prático com comandos essenciais:
-
-  * `git init`, `git status`, `git add`, `git commit`
-  * `git branch`, `git checkout -b`, `git merge`
-  * `git remote add origin`, `git push`, `git pull`
-  * `git tag`, convenções de mensagens e fluxo básico
-
-**Como usar**
-
-* Siga o passo a passo do `README.md` da pasta.
+**Stack:** Markdown (guia).
+**Resumo:** **Passo a passo** de Git usando a Pokédex como exemplo: `git init`, `git add/commit`, `branch`, `merge`, `pull/push`, `remote`, `tags` e boas práticas.
+**Leituras:** [`./developer-pokedex-git/README.md`](./developer-pokedex-git/README.md)
 
 ---
 
-## 9) Perfil DIO (dinâmico)
+## 9) Página de Conceitos (HTML+CSS)
 
-**Pasta:** [`./perfil-dio/`](./perfil-dio/)
-**Stack:** HTML, CSS (glassmorphism, grid), **JavaScript (fetch + DOMParser)**, **proxy local opcional**.
-
-**O que há no projeto**
-
-* Cabeçalho com avatar, título “Perfil DIO”, **nome dinâmico** e metadados públicos.
-* **Skills**: chips pessoais + principais habilidades detectadas.
-* **Conquistas recentes na DIO**: grade com **6 ícones** (PNG/WebP) das últimas conquistas públicas.
-* **Últimas Certificações**: **2 imagens** mais recentes de certificados públicos.
-* Rodapé com **logo DIO em SVG**.
-* **Fallback local** de dados (para não quebrar a UI sem rede) e **proxy local** (`server.js`) para CORS.
-
-**Como rodar**
-
-* Estático (Live Server): tenta proxy público; se bloquear, mostra fallback.
-* Com **proxy local** (recomendado para dados atuais):
-
-  ```bash
-  npm start   # ou: node server.js (http://localhost:8787)
-  ```
+**Pasta:** [`./conceitos-dev-web/`](./conceitos-dev-web/)
+**Stack:** HTML, CSS (documentação/estilo leve).
+**Resumo:** Página de estudo que resume conceitos listados (títulos do design fornecido), com navegação por âncoras e estrutura semântica.
+**Como rodar:** abrir `index.html`.
+**Leituras:** [`./conceitos-dev-web/README.md`](./conceitos-dev-web/README.md)
 
 ---
 
-## Apanhado geral (competências trabalhadas)
+## Apanhado geral (o que foi trabalhado)
 
-* **HTML semântico & acessibilidade**: landmarks, títulos bem estruturados, `alt` em imagens, âncoras internas.
-* **CSS moderno**: Flexbox, Grid, **responsividade mobile-first**, tipografia web, chips/labels, glassmorphism.
-* **JavaScript aplicado**:
+* **HTML semântico**: header/main/section/footer, acessibilidade básica, `alt` em imagens.
+* **CSS moderno**: Flexbox, Grid, responsividade mobile-first, tipografia web, paletas e contraste, glassmorphism, ícones/avatars, estados de interação.
+* **JavaScript na prática**:
 
-  * Lógica de jogo: **estado controlado**, **funções puras**, aleatoriedade encapsulada.
-  * DOM/UX: eventos, feedback visual, áudio/vídeo, logs.
-  * Integração dinâmica: fetch de HTML, parsing tolerante, fallback e proxy para CORS.
-* **Performance & UX**: `loading="lazy"`, assets organizados, grids fluidos, mensagens de status/erro.
-* **Versionamento**: Git do básico ao colaborativo (guia dedicado).
-* **Organização**: cada projeto em pasta própria com **README** específico e instruções.
+  * **Lógica de jogo** (Jokenpo): estado único, funções puras, aleatoriedade controlada, UI reativa.
+  * **DOM**: eventos, manipulação incremental, feedback visual, áudio/vídeo.
+  * **Integração dinâmica**: fetch, parsing de HTML (DOMParser), heurísticas tolerantes, fallback local, proxy para CORS.
+* **Performance & UX**: `loading="lazy"`, assets otimizados, grids responsivos, feedback de carregamento/erro.
+* **Versionamento**: Git básico (workflow local + remoto), convenções de commit/branch; guia incluído.
+* **Organização**: cada projeto em pasta própria com `README.md` dedicado e instruções de execução.
 
 ---
 
-Quer que eu sincronize este README com os conteúdos atuais de cada `README.md` das pastas (resumos, screenshots, pré-requisitos)? É só me enviar/confirmar os textos que eu integro aqui.
+## Como rodar os projetos rapidamente
+
+* **Projetos estáticos (HTML/CSS/JS DOM):** Live Server no VS Code (ou `python -m http.server`).
+* **Projetos com ES Modules (import/export):** servir por HTTP (Live Server).
+* **Projetos “dinâmicos” (Perfil DIO):**
+
+  * Estático com fallback (proxy público) **ou**
+  * `npm start` para rodar o **proxy local** (evita CORS) e garantir dados atualizados.
+
+---
+
+## Contribuição / organização do repo
+
+* Cada pasta contém seu **`README.md`** com instruções específicas.
+* Siga o padrão: `feature/nome-projeto`, PR com descrição, e commits concisos.
+* Issues podem ser abertas para melhorias de acessibilidade, performance e testes.
+
+---
+
+Se quiser, eu ajusto os **nomes das pastas** aqui no README para bater 1:1 com a tua árvore real (é só me passar a listagem), ou adiciono **badges e screenshots** de cada projeto.
