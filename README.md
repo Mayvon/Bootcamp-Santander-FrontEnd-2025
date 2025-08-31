@@ -7,12 +7,13 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ## Índice (links internos)
 1. [Página de Conceitos (HTML)](#1-página-de-conceitos-html) — [`./conceitos-dev-web/`](./1%20-%20HTML/index-html.md/)
-2. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
-3. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
-4. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
-5. [Discord Landing (Responsivo)](#5-discord-landing-responsivo) — [`./discord-landing/`](./discord-landing/)
-6. [YouTube Clone — Layout](#4-youtube-clone--layout) — [`./youtube-clone/`](./youtube-clone/)
-7. [Trilha de CSS — Landing](#3-trilha-de-css--landing) — [`./trilha-css-site/`](./trilha-css-site/)
+2. [Trilha de CSS](#3-trilha-de-css) — [`./trilha-css-site/`](./trilha-css-site/)
+3. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
+4. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
+5. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
+6. [Discord Landing (Responsivo)](#5-discord-landing-responsivo) — [`./discord-landing/`](./discord-landing/)
+7. [YouTube Clone — Layout](#4-youtube-clone--layout) — [`./youtube-clone/`](./youtube-clone/)
+
 8. [Jogo Yu-Gi-Oh! Jokenpo](#2-jogo-yu-gi-oh-jokenpo) — [`./yugioh-jokenpo/`](./yugioh-jokenpo/)
 9. [Perfil DIO (dinâmico)](#1-perfil-dio-dinâmico) — [`./perfil-dio/`](./perfil-dio/)
 
@@ -27,11 +28,11 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ---
 
-## 2) Trilha de CSS — Landing
+## 2) HTML e CSS 
 
 **Pasta:** [`./trilha-css-site/`](./trilha-css-site/)
 **Stack:** HTML, CSS (tipografia, grids, responsividade).
-**Resumo:** Página promocional da trilha de CSS com **hero**, **módulos** e **call-to-action**, trabalhando cores, espaçamentos e contraste.
+**Resumo:** Landing Page da trilha de CSS com **hero**, **módulos** e **call-to-action**, trabalhando cores, espaçamentos e contraste.
 **Como rodar:** abrir `index.html` (Live Server recomendado).
 **Leituras:** [`./trilha-css-site/README.md`](./trilha-css-site/README.md)
 
