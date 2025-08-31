@@ -4,7 +4,7 @@ Repositório: **[Mayvon/Bootcamp-Santander-FrontEnd-2025](https://github.com/May
 
 Monorepo com projetos de **HTML, CSS e JavaScript** desenvolvidos ao longo do bootcamp — foco em **responsividade**, **lógica aplicada**, **organização de código**, **acessibilidade** e **integração dinâmica**.
 
-> Para executar localmente, use o **Live Server** do VS Code ou um servidor HTTP simples: `python -m http.server`. Projetos com **ES Modules** precisam ser servidos por HTTP.
+> Para executar localmente, use o **Live Server** do VS Code ou um servidor HTTP simples: `python -m http.server`.
 
 ---
 
