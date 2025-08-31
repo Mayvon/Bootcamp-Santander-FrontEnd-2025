@@ -147,5 +147,3 @@ Este repositório reúne os projetos front-end desenvolvidos ao longo do percurs
 * Issues podem ser abertas para melhorias de acessibilidade, performance e testes.
 
 ---
-
-Se quiser, eu ajusto os **nomes das pastas** aqui no README para bater 1:1 com a tua árvore real (é só me passar a listagem), ou adiciono **badges e screenshots** de cada projeto.
