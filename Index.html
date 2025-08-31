@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Rápido de HTML</title>
+    <meta name="description" content="Resumo didático: Introdução ao HTML, Estrutura e Formatação, Formulários, Mídias, Tabelas e HTML Semântico.">
+</head>
+<body>
+
+    <div>
+        <div class="logo">
+            
+        </div>
+    </div>
+
+    <div class="bar"><hr></div>
+
+    <div class="content">
+        <!-- Lateral esquerda -->
+        <div class="sidebar">
+            <h2>Conteúdos</h2>
+            <ul>
+                <li><a href="#introducao">Introdução ao HTML na Prática</a></li>
+                <li><a href="#estrutura-formatacao">Estruturando HTML + Formatações</a></li>
+                <li><a href="#formularios">Trabalhando com Formulários</a></li>
+                <li><a href="#midias">Trabalhando com Mídias</a></li>
+                <li><a href="#tabelas">Criando Tabelas</a></li>
+                <li><a href="#semantico">Entendendo HTML Semântico</a></li>
+            </ul>
+
+            <h3>Dicas rápidas</h3>
+            <ul>
+                <li>Use <code>alt</code> em imagens.</li>
+                <li>Use títulos em ordem: <code>h1</code> → <code>h6</code>.</li>
+                <li>Mantenha código identado e legível.</li>
+                <li>Prefira tags semânticas quando possível.</li>
+            </ul>
+        </div>
+
+        <!-- Conteúdo principal -->
+        <div class="main">
+            <article id="introducao">
+                <h1>Introdução ao HTML na Prática</h1>
+                <p>HTML (HyperText Markup Language) é a linguagem que estrutura o conteúdo de páginas web. Um documento HTML é formado por elementos (tags) que definem títulos, parágrafos, links, imagens e seções da página.</p>
+                <p><strong>Estrutura mínima:</strong></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-br"&gt;
+  &lt;head&gt; &lt;meta charset="UTF-8"&gt; &lt;title&gt;Título&lt;/title&gt; &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é um parágrafo.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+                <p><strong>Tags comuns:</strong> <code>h1–h6</code>, <code>p</code>, <code>a</code>, <code>img</code>, <code>ul/ol/li</code>, <code>div</code>, <code>span</code>.</p>
+            </article>
+
+            <hr>
+
+            <section id="estrutura-formatacao">
+                <h2>Estruturando seu HTML + Formatações</h2>
+                <p>Estruturar bem o HTML facilita leitura, manutenção e acessibilidade. Use títulos hierárquicos, listas para itens, e formatação textual apenas quando necessário.</p>
+                <p><strong>Exemplos de formatação:</strong> <code>strong</code> (destaque), <code>em</code> (ênfase), <code>mark</code> (marcar), <code>code</code> (código), <code>br</code> (quebra de linha).</p>
+<pre><code>&lt;h2&gt;Seção&lt;/h2&gt;
+&lt;p&gt;Texto com &lt;strong&gt;destaque&lt;/strong&gt; e &lt;em&gt;ênfase&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+                <p><strong>Boas práticas:</strong> evitar usar formatação só visual (ex.: várias <code>&lt;br&gt;</code> para espaçar); preferir organização lógica com seções e listas.</p>
+            </section>
+
+            <hr>
+
+            <section id="formularios">
+                <h2>Trabalhando com Formulários em HTML</h2>
+                <p>Formulários coletam dados do usuário. Cada controle possui um <code>name</code> que identifica o valor enviado.</p>
+<pre><code>&lt;form action="/enviar" method="post"&gt;
+  &lt;label for="nome"&gt;Nome:&lt;/label&gt;
+  &lt;input id="nome" name="nome" type="text" required&gt;
+
+  &lt;label for="email"&gt;E-mail:&lt;/label&gt;
+  &lt;input id="email" name="email" type="email" required&gt;
+
+  &lt;label for="msg"&gt;Mensagem:&lt;/label&gt;
+  &lt;textarea id="msg" name="mensagem"&gt;&lt;/textarea&gt;
+
+  &lt;button type="submit"&gt;Enviar&lt;/button&gt;
+&lt;/form&gt;
+</code></pre>
+                <p><strong>Campos úteis:</strong> <code>text</code>, <code>email</code>, <code>number</code>, <code>date</code>, <code>checkbox</code>, <code>radio</code>, <code>file</code>, <code>select/option</code>. Atributos como <code>required</code>, <code>min</code>, <code>max</code> e <code>placeholder</code> melhoram a experiência.</p>
+            </section>
+
+            <hr>
+
+            <section id="midias">
+                <h2>Trabalhando com Mídias utilizando HTML</h2>
+                <p>Imagens, áudios e vídeos enriquecem o conteúdo. Sempre descreva imagens com <code>alt</code> para acessibilidade.</p>
+<pre><code>&lt;img src="foto.jpg" alt="Descrição da imagem"&gt;
+
+&lt;audio controls&gt;
+  &lt;source src="trilha.mp3" type="audio/mpeg"&gt;
+  Seu navegador não suporta áudio.
+&lt;/audio&gt;
+
+&lt;video controls width="400"&gt;
+  &lt;source src="video.mp4" type="video/mp4"&gt;
+  Seu navegador não suporta vídeo.
+&lt;/video&gt;
+</code></pre>
+                <p><strong>Dica:</strong> forneça múltiplos formatos quando possível (ex.: <code>.mp4</code> e <code>.webm</code>), e use textos alternativos.</p>
+            </section>
+
+            <hr>
+
+            <section id="tabelas">
+                <h2>Criando Tabelas com HTML</h2>
+                <p>Use tabelas para dados tabulares (linhas e colunas). Não use tabelas para layout.</p>
+<pre><code>&lt;table&gt;
+  &lt;caption&gt;Vendas por Mês&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;&lt;th&gt;Mês&lt;/th&gt;&lt;th&gt;Total (R$)&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;&lt;td&gt;Jan&lt;/td&gt;&lt;td&gt;10.000&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;Fev&lt;/td&gt;&lt;td&gt;12.500&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;&lt;td&gt;Total&lt;/td&gt;&lt;td&gt;22.500&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+</code></pre>
+                <p><strong>Elementos-chave:</strong> <code>table</code>, <code>caption</code>, <code>thead</code>, <code>tbody</code>, <code>tfoot</code>, <code>tr</code>, <code>th</code>, <code>td</code>.</p>
+            </section>
+
+            <hr>
+
+            <section id="semantico">
+                <h2>Entendendo HTML Semântico</h2>
+                <p>HTML semântico usa tags que descrevem o papel do conteúdo, melhorando SEO, acessibilidade e manutenção.</p>
+<pre><code>&lt;header&gt;Cabeçalho da página&lt;/header&gt;
+&lt;nav&gt;Links de navegação&lt;/nav&gt;
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h1&gt;Título do artigo&lt;/h1&gt;
+    &lt;section&gt;Um tópico do artigo&lt;/section&gt;
+    &lt;aside&gt;Nota lateral&lt;/aside&gt;
+  &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;Rodapé&lt;/footer&gt;
+</code></pre>
+                <p><strong>Quando usar:</strong> <code>header</code> (topo), <code>nav</code> (menus), <code>main</code> (conteúdo principal), <code>section</code> (seções temáticas), <code>article</code> (conteúdo independente), <code>aside</code> (complementos) e <code>footer</code> (rodapé).</p>
+            </section>
+        </div>
+
+        <!-- Navegação por âncoras à direita -->
+        <div class="anchors">
+            <h2>Neste Artigo</h2>
+            <ul>
+                <li><a href="#introducao">Introdução</a></li>
+                <li><a href="#estrutura-formatacao">Estrutura &amp; Formatações</a></li>
+                <li><a href="#formularios">Formulários</a></li>
+                <li><a href="#midias">Mídias</a></li>
+                <li><a href="#tabelas">Tabelas</a></li>
+                <li><a href="#semantico">HTML Semântico</a></li>
+                <li><a href="#topo">Voltar ao topo</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer">
+        <hr>
+        <p>Guia rápido de alguns conceitos fundamentais do HTML.</p>
+    </div>
+</body>
+</html>
