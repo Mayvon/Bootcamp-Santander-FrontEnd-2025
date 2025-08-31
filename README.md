@@ -6,8 +6,8 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 ---
 
 ## Índice (links internos)
-1. [Página de Conceitos (HTML)](#1-página-de-conceitos-html) — [`./conceitos-dev-web/`](./1%20-%20HTML/index-html.md/)
-2. [Trilha de CSS](#3-trilha-de-css) — [`./trilha-css-site/`](./trilha-css-site/)
+1. [Conceitos do HTML](#1-página-de-conceitos-html) — [`./conceitos-do-html/`](./1%20-%20HTML/index-html.md/)
+2. [HTML e CSS](#2-html-e-css) — [`./html-e-css/`](./2-%20HTML%20e%20CSS/css.md/)
 3. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
 4. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
 5. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
@@ -18,7 +18,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 9. [Perfil DIO (dinâmico)](#1-perfil-dio-dinâmico) — [`./perfil-dio/`](./perfil-dio/)
 
 ---
-## 1) Página de Conceitos (HTML)
+## 1) Conceitos do HTML
 
 **Pasta:** [`./conceitos-dev-web/`](./conceitos-dev-web/)
 **Stack:** HTML, CSS (documentação/estilo leve).
