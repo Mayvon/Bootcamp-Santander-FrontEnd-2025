@@ -6,7 +6,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 ---
 
 ## Índice (links internos)
-1. [Página de Conceitos (HTML)](#1-página-de-conceitos-html) — [`./conceitos-dev-web/`](./HTML/index-html.md/)
+1. [Página de Conceitos (HTML)](#1-página-de-conceitos-html) — [`./conceitos-dev-web/`](./1%20-%20HTML/index-html.md/)
 2. [Developer Pokédex — Guia Git](#8-developer-pokédex--guia-git) — [`./developer-pokedex-git/`](./developer-pokedex-git/)
 3. [Classificador de Nível de Herói — UI](#7-classificador-de-nível-de-herói--ui) — [`./classificador-heroi-interface/`](./classificador-heroi-interface/)
 4. [Classificador de Nível de Herói — CLI](#6-classificador-de-nível-de-herói--cli) — [`./classificador-heroi-cli/`](./classificador-heroi-cli/)
