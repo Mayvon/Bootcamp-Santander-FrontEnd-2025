@@ -5,7 +5,7 @@ Este repositório contém todos os projetos e atividades que desenvolvi durante 
 
 ## Certificado
 
-<img src="https://hermes.dio.me/certificates/cover/SHIYZ41U.jpg" alt="Certificado" width="800"/>
+<img src="https://hermes.dio.me/certificates/cover/SHIYZ41U.jpg" alt="Certificado" width="650"/>
 
 ---
 
